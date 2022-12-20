@@ -4,6 +4,7 @@
 import string
 import random
 from typing import List
+import requests
 
 class Game:
     def __init__(self) -> List[str]:
@@ -17,4 +18,7 @@ class Game:
         for letter in word:
             if letter not in self.grid:
                 return False
+        response = requests.get(f"https://wagon-dictionary.herokuapp.com/{word}").json()
+        if response["found"] != True :
+            return False
         return True
