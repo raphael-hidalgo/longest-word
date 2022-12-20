@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "longest-word"
+version = "0.1.0"
+description = ""
+authors = ["Raphael Hidalgo <raphael.hidalgo@ieseg.fr>"]
+readme = "README.md"
+packages = [{include = "longest_word"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.2.0"
+pylint = "^2.15.9"
+pyenchant = "^3.2.2"
+nltk = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
