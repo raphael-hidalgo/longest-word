@@ -23,9 +23,3 @@ class TestGame:
         assert game.is_valid("HELLO") is False
         assert game.is_valid("BAROQUE") is True
         assert game.is_valid("BARON") is False
-
-    def test_is_english_word(self):
-        game = Game()
-        game.grid = ["H","E","L","L","O","A","X","Y","V"]
-        assert game.is_valid("HELLO") is True
-        assert game.is_valid("HELLA") is False

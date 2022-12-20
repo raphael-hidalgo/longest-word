@@ -4,7 +4,6 @@
 import string
 import random
 from typing import List
-from nltk.corpus import words
 
 class Game:
     def __init__(self) -> List[str]:
@@ -18,6 +17,4 @@ class Game:
         for letter in word:
             if letter not in self.grid:
                 return False
-        if word.lower() not in words.words():
-            return False
         return True
